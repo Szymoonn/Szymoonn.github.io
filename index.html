@@ -1,18 +1,44 @@
 <html>
-<head>
-<style>
-h1{
-color: white;
-}
-body{
-background-color: #0f0f0f;
-}
-</style>
-</head>
-<body>
-<h1>
-Bobek nie ma racji </br>
-W da piętro nie można pić swojego picia
-</h1>
-</body>
+  <head>
+    <style>
+      :root {
+        --dupa: rgb(255,255,255);
+      }
+      h1{
+        color: white;
+      }
+      body{
+        background-color: var(--dupa);
+      }
+    </style>
+    <script>
+      const r = document.querySelector(':root');
+      const red = 0;
+      const green = 0;
+      const blue = 0;
+      
+      const cyce = () => {
+        red++;
+        green+=2;
+        blue+=3;
+        
+        if(red>=254) red=0;
+        if(green>=254) green=0;
+        if(blue>=254) blue=0;
+        
+        const hój = "rgb(" + red + "," + green + "," + blue + ")"
+        
+        r.style.setProperty('--dupa', hój;
+      }
+      
+      cyce();
+      setInterval(cyce, 20);
+    </script>
+  </head>
+  <body>
+    <h1>
+      Bobek nie ma racji </br>
+      W da pietro nie można pić swojego picia
+    </h1>
+  </body>
 </html>
